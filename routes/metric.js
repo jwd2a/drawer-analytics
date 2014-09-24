@@ -5,8 +5,13 @@ var _ = require("underscore");
 
 router.get('/', function(req, res) {
     Metric.find(req.query, function(err, result){
+
+        var response = {};
+        response.count = result.length;
+        response.data = result;
+
         if(!err){
-            res.send(result);
+            res.send(response);
         }else{
         	res.send(err);
 				}
