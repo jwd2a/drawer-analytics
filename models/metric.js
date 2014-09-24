@@ -10,7 +10,8 @@ var metricSchema = new mongoose.Schema({
     type: String,
     objectType: String,
     objectId: String,
-    date: Date
+    date: Date,
+    apiVersion: String
 });
 
 exports.model = mongoose.model("Metric", metricSchema);
