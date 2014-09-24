@@ -7,8 +7,9 @@ router.get('/', function(req, res) {
     Metric.find(req.query, function(err, result){
         if(!err){
             res.send(result);
-        }
-        res.send(err);
+        }else{
+        	res.send(err);
+				}
     });
 });
 
@@ -17,8 +18,9 @@ router.post('/', function(req, res){
     metric.save(function(err, result){
         if(!err){
             res.send(result);
-        }
-        res.send(err);
+        }else{
+        	res.send(err);
+				}
     });
 });
 
