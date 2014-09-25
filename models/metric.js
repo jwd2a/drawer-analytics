@@ -9,7 +9,8 @@ var _obj = new mongoose.Schema({
 var metricSchema = new mongoose.Schema({
     type: String,
     objectType: String,
-    objectId: String,
+    objectId: String,,
+    agent: String,
     date: Date,
     apiVersion: String
 });
